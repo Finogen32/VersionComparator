@@ -10,9 +10,9 @@ public class CompareVersion {
             case (">"):
                 for (int i = 0; i < version1.size(); i++) {
                     if (version1.get(i).equals(version2.get(i)) && i == version1.size() - 1) {
-                        continue;
-                    } else if (version1.get(i).equals(version2.get(i))) {
                         return false;
+                    } else if (version1.get(i).equals(version2.get(i))) {
+                        continue;
                     } else {
                         return Integer.parseInt(version1.get(i)) > Integer.parseInt(version2.get(i));
                     }
@@ -20,9 +20,9 @@ public class CompareVersion {
             case (">="):
                 for (int i = 0; i < version1.size(); i++) {
                     if (version1.get(i).equals(version2.get(i)) && i == version1.size() - 1) {
-                        continue;
-                    } else if (version1.get(i).equals(version2.get(i))) {
                         return true;
+                    } else if (version1.get(i).equals(version2.get(i))) {
+                        continue;
                     } else {
                         return Integer.parseInt(version1.get(i)) >= Integer.parseInt(version2.get(i));
                     }
@@ -30,9 +30,9 @@ public class CompareVersion {
             case ("<"):
                 for (int i = 0; i < version1.size(); i++) {
                     if (version1.get(i).equals(version2.get(i)) && i == version1.size() - 1) {
-                        continue;
-                    } else if (version1.get(i).equals(version2.get(i))) {
                         return false;
+                    } else if (version1.get(i).equals(version2.get(i))) {
+                        continue;
                     } else {
                         return Integer.parseInt(version1.get(i)) < Integer.parseInt(version2.get(i));
                     }
@@ -40,9 +40,9 @@ public class CompareVersion {
             case ("<="):
                 for (int i = 0; i < version1.size(); i++) {
                     if (version1.get(i).equals(version2.get(i)) && i == version1.size() - 1) {
-                        continue;
-                    } else if (version1.get(i).equals(version2.get(i))) {
                         return true;
+                    } else if (version1.get(i).equals(version2.get(i))) {
+                        continue;
                     } else {
                         return Integer.parseInt(version1.get(i)) <= Integer.parseInt(version2.get(i));
                     }
@@ -50,9 +50,9 @@ public class CompareVersion {
             case ("="):
                 for (int i = 0; i < version1.size(); i++) {
                     if (version1.get(i).equals(version2.get(i)) && i == version1.size() - 1) {
-                        continue;
-                    } else if (version1.get(i).equals(version2.get(i))) {
                         return true;
+                    } else if (version1.get(i).equals(version2.get(i))) {
+                        continue;
                     } else {
                         return Integer.parseInt(version1.get(i)) == Integer.parseInt(version2.get(i));
                     }

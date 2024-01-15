@@ -4,7 +4,14 @@ import java.util.ArrayList;
 
 public class Version {
     ArrayList<String> numberArray = new ArrayList<String>();
-    int length;
+
+    public ArrayList<String> getNumberArray(){
+        return this.numberArray;
+    }
+
+    public void setNumberArray(ArrayList<String> numberArray){
+        this.numberArray = numberArray;
+    }
 
     public Version(String version) {
         String[] numberArrayForList = version.split("\\.");
@@ -12,14 +19,13 @@ public class Version {
             for (String numberFromArray : numberArrayForList) {
                 this.numberArray.add(numberFromArray);
             }
-            this.length = numberArray.size();
         } else {
             System.out.println("App version has invalid data");
             throw new NumberFormatException();
         }
     }
 
-    public boolean checkIfArraysElementsIsNumeric(String[] numericArray) {
+    public static boolean checkIfArraysElementsIsNumeric(String[] numericArray) {
         boolean flag = true;
         for (String arrayElement : numericArray) {
             char[] charArray = arrayElement.toCharArray();
